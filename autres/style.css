@@ -1,0 +1,136 @@
+/* --- CONFIGURATION GLOBALE --- */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #272829;
+    background-color: #fff;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* --- BARRE LATÉRALE (LE MENU GAUCHE) --- */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px; /* Largeur de la colonne */
+    background: #040b14; /* Fond sombre */
+    color: white;
+    padding: 0 15px;
+    overflow-y: auto;
+    transition: all 0.5s;
+    z-index: 9997;
+}
+
+/* Photo de profil */
+.profile img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    height: 120px;
+    border: 8px solid #2c2f3f;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Liens du menu */
+.nav-menu {
+    padding: 30px 0 0 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-bottom: 20px;
+}
+
+.nav-menu a {
+    display: flex;
+    align-items: center;
+    color: #a8a9b4;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.nav-menu a i {
+    font-size: 24px;
+    padding-right: 15px;
+    color: #6f7180;
+    text-align: center;
+    width: 30px; /* Fixe la largeur pour aligner le texte */
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #fff;
+}
+
+.nav-menu a:hover i, .nav-menu a.active i {
+    color: #149ddd;
+}
+
+/* --- CONTENU PRINCIPAL (À DROITE) --- */
+#main {
+    margin-left: 300px;
+    padding: 40px;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+    min-height: 80vh;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+
+/* Style des cartes projets */
+.projects-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-card {
+    background: #f5f8fd;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- RESPONSIVE (MOBILE) --- */
+@media (max-width: 992px) {
+    #header {
+        left: -300px;
+    }
+    #main {
+        margin-left: 0;
+    }
+}

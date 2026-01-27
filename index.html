@@ -3,71 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - Benjamin</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <title>Portfolio - Benjamin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="autres/style.css">
 </head>
 <body>
 
-    <header id="header">
-        <div class="profile">
-            <img src="https://via.placeholder.com/150" alt="Photo de profil"> 
-            <h1><a href="index.html">Benjamin</a></h1>
+    <header id="sidebar">
+        <div class="profile-container">
+            <div class="profile-img">
+                <i class="fa-solid fa-user"></i> 
+            </div>
+            <h1>Benjamin Toubas</h1>
         </div>
 
         <nav class="nav-menu">
             <ul>
-                <li><a href="#accueil" class="active"><i class="fas fa-home"></i> <span>Accueil</span></a></li>
-                <li><a href="#apropos"><i class="fas fa-user"></i> <span>À propos</span></a></li>
-                <li><a href="#competences"><i class="fas fa-code"></i> <span>Compétences</span></a></li>
-                <li><a href="#projets"><i class="fas fa-folder-open"></i> <span>Projets</span></a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+                <li><a href="#accueil" class="active"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="#apropos"><i class="fa-solid fa-user"></i> Qui suis-je ?</a></li>
+                <li><a href="#competences"><i class="fa-solid fa-layer-group"></i> Compétences</a></li>
+                <li><a href="#projets"><i class="fa-solid fa-code"></i> Projets</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
             </ul>
         </nav>
+
+        <div class="sidebar-footer">
+            <div class="visualizer"></div>
+        </div>
     </header>
 
-    <main id="main">
-
+    <main id="main-content">
+        
         <section id="accueil">
-            <h2>Accueil</h2>
-            <p>Bienvenue sur mon portfolio ! Je suis Benjamin.</p>
+            <h2 class="glow-text">Accueil</h2>
+            <p class="intro-text">
+                Bienvenue sur mon portfolio ! Je suis Benjamin, 
+                Explorez mon univers à travers mes projets et mes compétences techniques.
+            </p>
         </section>
 
         <section id="apropos">
-            <h2>À propos</h2>
-            <p>Décrire mon parcours.</p>
+            <h2 class="glow-text">Qui suis-je ?</h2>
+            <p class="intro-text">Présentation (Je suis Benjamin, j'ai fait un BTS, etc...)</p>
         </section>
 
         <section id="competences">
-            <h2>Compétences</h2>
-            <ul>
-                <li>Réseau</li>
-                <li>GitHub</li>
-                <li>Autres</li>
-            </ul>
+            <h2 class="glow-text">Compétences</h2>
+            <div class="skills-container">
+                <div class="skill-item">Administration réseau</div>
+                <div class="skill-item">Git / GitHub</div>
+                <div class="skill-item">Analyse forensique</div>
+            </div>
         </section>
 
         <section id="projets">
-            <h2>Mes Projets</h2>
+            <h2 class="glow-text">Projets</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Projet 1</h3>
-                    <p>Description.</p>
+                    <div class="card-header">Projet 1</div>
+                    <p>Création d'une API.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Projet 2</h3>
-                    <p>Description.</p>
+                    <div class="card-header">Projet 2</div>
+                    <p>Conception et création d'une architecture réseau complète.</p>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
-            <p>N'hésitez pas à me contacter par email.</p>
+            <h2 class="glow-text">Contact</h2>
+            <p class="intro-text">
+                N'hésitez pas à me contacter pour toute proposition de stage !
+            </p>
+
+            <div class="contact-container">
+                <a href="mailto:benjamn.toubas@laposte.net" class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>benjamin.toubas@laposte.net</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/benjamin-toubas-5b7488275" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://github.com/Benjamin1804" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
         </section>
 
     </main>
+    
+    <script>
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        const sections = document.querySelectorAll('section');
 
+        window.addEventListener('scroll', () => {
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

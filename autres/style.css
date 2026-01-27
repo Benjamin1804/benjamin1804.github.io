@@ -480,6 +480,68 @@ section {
     transform: translateY(-3px);
 }
 
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin-top: 40px;
+    margin-left: 10px; /* Petit décalage pour ne pas coller au bord */
+    padding-left: 40px; /* Espace pour la ligne et les points */
+    border-left: 3px solid rgba(0, 242, 255, 0.3); /* La ligne verticale continue */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px; /* Espace entre chaque étape */
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -49px; /* On le positionne pile sur la ligne verticale */
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--bg-dark); /* Centre vide (couleur du fond) */
+    border: 3px solid var(--accent-cyan); /* Bordure Cyan */
+    border-radius: 50%; /* Rond parfait */
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.5); /* Petit effet néon */
+    transition: 0.3s;
+}
+
+.timeline-item:hover .timeline-dot {
+    background-color: var(--accent-cyan);
+    box-shadow: 0 0 20px var(--accent-cyan);
+    transform: scale(1.2);
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px 0;
+    color: var(--text-main);
+    font-size: 1.5rem;
+}
+
+.date-badge {
+    display: inline-block;
+    background: rgba(0, 242, 255, 0.1);
+    color: var(--accent-cyan);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 242, 255, 0.2);
+}
+
+.timeline-content p {
+    color: var(--text-dim);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateX(5px);
+    transition: 0.3s;
+}
+
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
     .hero-name {

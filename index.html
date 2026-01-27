@@ -22,6 +22,7 @@
                 <li><a href="#accueil" class="active"><i class="fa-solid fa-house"></i> Accueil</a></li>
                 <li><a href="#apropos"><i class="fa-solid fa-user"></i> Qui suis-je ?</a></li>
                 <li><a href="#competences"><i class="fa-solid fa-layer-group"></i> Compétences</a></li>
+                <li><a href="#outils"><i class="fa-solid fa-toolbox"></i> Outils & Logiciels maitrisés</a></li>
                 <li><a href="#projets"><i class="fa-solid fa-code"></i> Projets</a></li>
                 <li><a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
             </ul>
@@ -34,12 +35,17 @@
 
     <main id="main-content">
         
-        <section id="accueil">
-            <h2 class="glow-text">Accueil</h2>
-            <p class="intro-text">
-                Bienvenue sur mon portfolio ! Je suis Benjamin, 
-                Explorez mon univers à travers mes projets et mes compétences techniques.
-            </p>
+        <section id="accueil" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-name">Benjamin <span class="cyan-highlight">Toubas</span></h1>
+                <h2 class="hero-subtitle">Administration Système & Sécurité</h2>
+                
+                <p class="hero-desc">
+                    Etudiant en 3e année de BUT à l'Université de Toulouse.
+                </p>
+                
+                <a href="#projets" class="btn-hero">Voir mes travaux</a>
+            </div>
         </section>
 
         <section id="apropos">
@@ -49,10 +55,88 @@
 
         <section id="competences">
             <h2 class="glow-text">Compétences</h2>
-            <div class="skills-container">
-                <div class="skill-item">Administration réseau</div>
-                <div class="skill-item">Git / GitHub</div>
-                <div class="skill-item">Analyse forensique</div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <span class="skill-title">RÉALISER</span>
+                    <p class="skill-desc">une application complète</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-title">OPTIMISER</span>
+                    <p class="skill-desc">les solutions à un problème donné</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-title">ADMINISTRER</span>
+                    <p class="skill-desc">des services dans une architecture réseau</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-title">GÉRER</span>
+                    <p class="skill-desc">des systèmes d'information décisionnels</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-title">CONDUIRE</span>
+                    <p class="skill-desc">la conception et la mise en oeuvre d'un projet</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-title">COLLABORER</span>
+                    <p class="skill-desc">et savoir manager une équipe informatique</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="outils">
+            <h2 class="glow-text">Outils & Logiciels maitrisés</h2>
+            
+            <div class="tools-grid">
+
+                <div class="tool-item">
+                    <i class="fa-brands fa-linux"></i>
+                    <span>Linux</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-solid fa-code"></i> <span>VS Code</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-solid fa-box-open"></i> <span>VirtualBox</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-brands fa-docker"></i>
+                    <span>Docker</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-solid fa-cube"></i> <span>Vagrant</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-solid fa-dharmachakra"></i> <span>Kubernetes</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-solid fa-share-nodes"></i> <span>Ansible</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-solid fa-eye"></i> <span>Nagios</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-solid fa-key"></i> <span>Keycloak</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-solid fa-shield-halved"></i> <span>Wazuh</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-solid fa-hard-drive"></i> <span>TestDisk</span>
+                </div>
+
+                <div class="tool-item">
+                    <i class="fa-solid fa-camera-retro"></i> <span>PhotoRec</span>
+                </div>
             </div>
         </section>
 
@@ -73,24 +157,81 @@
         <section id="contact">
             <h2 class="glow-text">Contact</h2>
             <p class="intro-text">
-                N'hésitez pas à me contacter pour toute proposition de stage !
+                Une idée de projet ? Une proposition de stage ? N'hésitez pas à m'écrire via ce formulaire ou directement par email.
             </p>
 
-            <div class="contact-container">
-                <a href="mailto:benjamn.toubas@laposte.net" class="contact-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>benjamin.toubas@laposte.net</span>
-                </a>
+            <div class="contact-wrapper">
+                
+                <div class="contact-infos">
+                    
+                    <div class="info-box">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="info-details">
+                            <span>Email</span>
+                            <a href="mailto:benjamin.toubas@laposte.net">benjamin.toubas@laposte.net</a>
+                        </div>
+                    </div>
 
-                <a href="https://www.linkedin.com/in/benjamin-toubas-5b7488275" target="_blank" class="contact-item">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
+                    <div class="info-box">
+                        <div class="icon-circle">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="info-details">
+                            <span>GitHub</span>
+                            <a href="https://github.com/Benjamin1804" target="_blank">Benjamin1804</a>
+                        </div>
+                    </div>
 
-                <a href="https://github.com/Benjamin1804" target="_blank" class="contact-item">
-                    <i class="fa-brands fa-github"></i>
-                    <span>GitHub</span>
-                </a>
+                    <div class="info-box">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="info-details">
+                            <span>Localisation</span>
+                            <p>Toulouse, France</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="info-details">
+                            <span>Curriculum Vitae</span>
+                            <a href="autres/CV_Benjamin_Toubas.pdf" download class="cv-link">
+                                Télécharger mon CV <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://formspree.io/f/TON_ID_FORMSPREE" method="POST">
+                    
+                    <div class="input-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject">Objet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Envoyer</button>
+                </form>
+
             </div>
         </section>
 

@@ -64,7 +64,7 @@
                         <h3>BUT DACS (Développement d'Applications Communicantes & Sécurisées)</h3> <span class="date-badge">2025 - 2026 (En cours)</span>
                         <p>
                             Formation approfondie en administration système, cybersécurité et architecture réseaux. Focus sur la 
-                            sécurité et l'implémentation de leurs outils.
+                            sécurité et l'implémentation de leurs outils
                         </p>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                         <h3>BTS CIEL (Cybersécurité, Informatique et réseaux, Électronique)</h3>
                         <span class="date-badge">2023 - 2025</span>
                         <p>
-                            Formation technique axée sur les systèmes électroniques et l'informatique industrielle à but généraliste.
+                            Formation technique axée sur les systèmes électroniques et l'informatique industrielle à but généraliste
                         </p>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                         <span class="date-badge">2020 - 2022</span>
                         <p>
                             Acquisition des bases juridiques, d'une culture générale solide, et d'un 
-                            atout pour appréhender le cadre légal de la sécurité des données.
+                            atout pour appréhender le cadre légal de la sécurité des données
                         </p>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                         <p>
                             <p>
                                 Maintenance préventive et corrective des équipements industriels. Développement d'esprit 
-                                d'analyse et de la réactivité face aux dysfonctionnements.
+                                d'analyse et de la réactivité face aux dysfonctionnements
                             </p>
                         </p>
                     </div>
@@ -151,7 +151,7 @@
         </section>
 
         <section id="outils">
-            <h2 class="glow-text">Outils & Logiciels maitrisés</h2>
+            <h2 class="glow-text">Outils & Logiciels</h2>
             
             <div class="tools-grid">
 
@@ -209,13 +209,22 @@
         <section id="projets">
             <h2 class="glow-text">Projets</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="card-header">Projet 1</div>
-                    <p>Création d'une API.</p>
-                </div>
-                <div class="project-card">
-                    <div class="card-header">Projet 2</div>
-                    <p>Conception et création d'une architecture réseau complète.</p>
+                <div class="project-card" onclick="toggleProject(this)">
+                    <div class="card-header">Projet "Club Photo Nailloux" <i class="fa-solid fa-chevron-down toggle-icon"></i></div>
+                    <p class="project-short">Déploiement d'une infrastructure réseau de zéro</p>
+            
+                    <div class="project-details">
+                        <p>Conception et déploiement de l'architecture d'un réseau et de ses services à partir d'un cahier des charges.</p>
+                    </div>
+                    </div>
+
+                <div class="project-card" onclick="toggleProject(this)">
+                    <div class="card-header">Projet "Autan Solaire"<i class="fa-solid fa-chevron-down toggle-icon"></i></div>
+                    <p class="project-short">Développement Backend d'une application</p>
+            
+                    <div class="project-details">
+                        <p>Développement d'une API REST sécurisée avec Symfony et API Platform, et l'authentification par JWT.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -223,7 +232,7 @@
         <section id="contact">
             <h2 class="glow-text">Contact</h2>
             <p class="intro-text">
-                Une idée de projet ? Une proposition de stage ? N'hésitez pas à m'écrire via ce formulaire ou directement par email.
+                Si mon profil vous intéresse, n'hésitez pas à m'écrire via ce formulaire ou directement par email.
             </p>
 
             <div class="contact-wrapper">
@@ -266,7 +275,7 @@
                         </div>
                         <div class="info-details">
                             <span>Curriculum Vitae</span>
-                            <a href="autres/CV_Benjamin_Toubas.pdf" download class="cv-link">
+                            <a href="autres/CV_Benjamin_Toubas_portfolio.pdf" download class="cv-link">
                                 Télécharger mon CV <i class="fa-solid fa-download"></i>
                             </a>
                         </div>
@@ -325,6 +334,15 @@
                 }
             });
         });
+
+        function toggleProject(card) {
+
+            document.querySelectorAll('.project-card').forEach(c => {
+                if (c !== card) c.classList.remove('expanded');
+            });
+    
+            card.classList.toggle('expanded');
+        }
     </script>
 </body>
 </html>
